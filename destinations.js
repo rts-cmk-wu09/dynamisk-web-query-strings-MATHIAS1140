@@ -7,15 +7,22 @@ document.addEventListener("DOMContentLoaded", function () {
       // hent ul
       let ul = document.querySelector("#destinations");
 
-      data.destinations.forEach(destination => {
+      data.destinations.forEach((destination) => {
         const li = document.createElement("li");
         ul.append(li);
         li.innerHTML = `
             <a href="destination.html?id=${destination.id}">
-                <img src="img/${destination.image}">
-                <p>${destination.title}</p>
+            <img src="img/${destination.image}">
+                <div class="div">
+                <i class="fa-regular fa-heart"></i>
+                  <p>more</p>
+                </div>
             </a>
-        `
+        `;
       });
     });
 });
+
+
+
+// <i class="fa-solid fa-heart"></i> //
